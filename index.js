@@ -13,8 +13,14 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(cors());
 
+app.get("/",(req,res)=>{
+  res.send("Hello Backend! Today is 30.10.2024")
+})
+
 //user route
 app.use("/api/submit", userRoute);
+
+
 
 //db connection
 mongoose
